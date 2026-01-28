@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Art Studio | Griya Praja Mandiri Cilegon</title>
+
+<style>
+:root{
+  --pink:#d66f9a;
+  --soft:#fff7fb;
+  --dark:#333;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#fff;
+  color:var(--dark);
+  line-height:1.7;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes zoomIn{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
+
+/* ================= NAVBAR ================= */
+nav{
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 28px;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+  animation:fadeUp .8s ease;
+}
+
+nav h2{color:var(--pink);margin:0;font-weight:800}
+nav a{text-decoration:none;color:#444;margin-left:20px;font-weight:600}
+nav a:hover{color:var(--pink)}
+
+/* ================= HERO ================= */
+header{
+  height:90vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://down-id.img.susercontent.com/file/id-11134207-7qul1-lh4tus0s78q461@resize_w900_nl.webp");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+header h1{
+  font-size:48px;
+  font-weight:900;
+  animation:fadeUp 1s ease;
+}
+
+header p{
+  font-size:18px;
+  animation:fadeUp 1.2s ease;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:26px;
+  background:var(--pink);
+  color:#fff;
+  padding:14px 36px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  animation:pulse 2s infinite;
+}
+
+/* ================= SECTION ================= */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+  animation:fadeUp 1s ease;
+}
+
+.section-title{
+  text-align:center;
+  font-size:34px;
+  font-weight:900;
+  margin-bottom:50px;
+}
+
+/* ================= ABOUT ================= */
+.store{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  background:var(--soft);
+  border-radius:30px;
+  padding:40px;
+}
+
+.store img{
+  width:100%;
+  border-radius:24px;
+  animation:zoomIn 1s ease;
+}
+
+.mp-info{
+  margin-top:20px;
+  background:#fff;
+  padding:24px;
+  border-radius:22px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+  animation:fadeUp 1.2s ease;
+}
+
+/* ================= SERVICES ================= */
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.service{
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 14px 30px rgba(0,0,0,.08);
+  padding:18px;
+  text-align:center;
+  transition:.4s ease;
+  animation:fadeUp 1s ease;
+}
+
+.service:hover{
+  transform:translateY(-12px);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.service img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:18px;
+  transition:.4s ease;
+}
+
+.service:hover img{
+  transform:scale(1.05);
+}
+
+.service h4{
+  color:var(--pink);
+  margin:16px 0 6px;
+}
+
+.price{font-weight:800}
+
+/* ================= GALLERY ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+}
+
+.gallery img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+  transition:.4s ease;
+  animation:zoomIn 1s ease;
+}
+
+.gallery img:hover{
+  transform:scale(1.08);
+}
+
+/* ================= FORM ================= */
+.custom-form{
+  max-width:700px;
+  margin:auto;
+  background:var(--soft);
+  padding:40px;
+  border-radius:30px;
+  box-shadow:0 14px 30px rgba(0,0,0,.08);
+  animation:fadeUp 1s ease;
+}
+
+.custom-form h3{
+  text-align:center;
+  color:var(--pink);
+  margin-bottom:30px;
+}
+
+.custom-form input,
+.custom-form textarea,
+.custom-form select{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border-radius:14px;
+  border:1px solid #ccc;
+  transition:.3s ease;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus,
+.custom-form select:focus{
+  border-color:var(--pink);
+  outline:none;
+  box-shadow:0 0 0 2px rgba(214,111,154,.2);
+}
+
+.custom-form textarea{height:120px}
+
+footer{
+  text-align:center;
+  padding:28px;
+  color:#777;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:992px){
+  .services{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:768px){
+  header h1{font-size:34px}
+  .store{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+  .services{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Nail Art Studio</h2>
+  <div>
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#custom">Custom</a>
+  </div>
+</nav>
+
+<header>
+  <div>
+    <h1>Luxury Nail Art Studio</h1>
+    <p>Professional • Clean • Elegant</p>
+    <a class="btn" href="#custom">Custom Nail Art</a>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="store">
+    <img src="https://i.pinimg.com/1200x/e7/c9/6f/e7c96f05395623e199b6934664f63a65.jpg">
+    <div>
+      <h3 style="color:#d66f9a">Toko Nail Art Studio</h3>
+      <p>Nail Art Studio adalah tempat perawatan kecantikan yang menghadirkan suasana nyaman, bersih, dan profesional. Kami menyediakan berbagai layanan kecantikan dengan hasil yang rapi,
+         higienis, dan ditangani oleh tenaga berpengalaman untuk menunjang penampilan Anda.</p>
+
+      <div class="mp-info">
+        <p><strong>Custom Fake Nails</strong> Kuku palsu yang dibuat sesuai desain, bentuk, dan warna pilihan pelanggan</p>
+        <p><strong>Gel Polish</strong> Pewarnaan pada kuku asli dengan hasil mengilap dan tahan lama</p>
+        <p><strong>Manicure</strong> Membersihkan dan merawat kuku tangan supaya terlihat rapi dan sehat</p>
+        <p><strong>Pedicure</strong> Perawatan kuku kaki agar bersih, sehat, dan nyaman</p>
+        <p><strong>Eyelash</strong> Pemasangan bulu mata untuk tampilan lebih lentik dan natural</p>
+        <p><strong>Hairdo</strong> Penataan rambut elegan dan hasil yang indah untuk berbagai acara</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="service"><img src="https://i.pinimg.com/1200x/ba/33/e6/ba33e665ef5f3e5fbf8c1a3f439e33b6.jpg"><h4>Custom Fake Nails</h4><p class="price">Rp 80.000 – Rp 150.000</p></div>
+    <div class="service"><img src="https://i.pinimg.com/1200x/ff/da/28/ffda28118015c870c770c4fb0e7a9479.jpg"><h4>Gel Polish</h4><p class="price">Rp 60.000</p></div>
+    <div class="service"><img src="https://i.pinimg.com/736x/08/24/3c/08243c7f8dcf461c95069d84239313da.jpg"><h4>Manicure</h4><p class="price">Rp 50.000</p></div>
+    <div class="service"><img src="https://i.pinimg.com/736x/f4/aa/8b/f4aa8b73708548d50854d31133e042aa.jpg"><h4>Pedicure</h4><p class="price">Rp 50.000</p></div>
+    <div class="service"><img src="https://i.pinimg.com/1200x/c4/5f/26/c45f2673a1e592a824a90af4181ff838.jpg"><h4>Eyelash</h4><p class="price">Rp 70.000</p></div>
+    <div class="service"><img src="https://i.pinimg.com/736x/b3/33/ac/b333ac224b4c2956d7db37e36e96370c.jpg"><h4>Hairdo</h4><p class="price">Rp 150.000 – Rp 300.000</p></div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery">
+    <img src="https://i.pinimg.com/736x/02/86/d1/0286d1568a35406232aa42a5a54d39d2.jpg">
+    <img src="https://i.pinimg.com/1200x/bd/8b/c7/bd8bc73c2a1654cc9c8566f3165e159d.jpg">
+    <img src="https://i.pinimg.com/1200x/6f/29/06/6f2906231d46763f8f1470d8f7d4d0fd.jpg">
+    <img src="https://i.pinimg.com/736x/aa/4a/26/aa4a2661ca1080086e1a700cabfd211a.jpg">
+    <img src="https://i.pinimg.com/736x/5b/aa/80/5baa806f4f71ee95254df232d9136ed2.jpg">
+    <img src="https://i.pinimg.com/736x/74/87/0d/74870dbcc0c5e9e6a51263e489939264.jpg">
+    <img src="https://i.pinimg.com/736x/36/38/93/3638933a4c8bbdab40cf182cdd520e00.jpg">
+    <img src="https://i.pinimg.com/1200x/cd/ce/71/cdce71d8e62d4527df476370b4372fce.jpg">
+    <img src="https://i.pinimg.com/1200x/50/a4/3b/50a43b84849d2cc0563551897d0e6a52.jpg">
+    <img src="https://i.pinimg.com/1200x/65/8c/01/658c017097ce59c84369b07613ff079b.jpg">
+    <img src="https://i.pinimg.com/1200x/70/02/57/7002576858ab29a5b74f1c270064a696.jpg">
+    <img src="https://i.pinimg.com/1200x/d9/d9/e7/d9d9e7df6b69b172aa2e26c4d341e6b6.jpg">
+  </div>
+</section>
+
+<section class="section" id="custom">
+  <div class="custom-form">
+    <h3>Form Custom Nail Art</h3>
+    <form>
+      <input type="text" placeholder="Nama Lengkap" required>
+      <input type="tel" placeholder="Nomor WhatsApp" required>
+      <select required>
+        <option value="">Panjang Kuku</option>
+        <option>Pendek</option>
+        <option>Sedang</option>
+        <option>Panjang</option>
+      </select>
+      <select required>
+        <option value="">Bentuk Kuku</option>
+        <option>Square</option>
+        <option>Oval</option>
+        <option>Almond</option>
+        <option>Coffin</option>
+        <option>Stiletto</option>
+      </select>
+      <input type="text" placeholder="Warna Favorit">
+      <textarea placeholder="Tema / Request Design"></textarea>
+      <button class="btn" type="submit" style="display:block;margin:20px auto 0">Kirim ke WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+© 2025 Nail Art Studio • Griya Praja Mandiri, Cilegon
+</footer>
+
+</body>
+</html>
+
+
+
